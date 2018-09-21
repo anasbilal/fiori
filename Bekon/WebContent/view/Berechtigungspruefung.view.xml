@@ -1,0 +1,156 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:sap.ui.commons="sap.ui.commons"
+	xmlns:sap.ui.commons.layout="sap.ui.commons.layout" xmlns:sap.ui.core="sap.ui.core"
+	controllerName="sap.Bekon.controller.Berechtigungspruefung" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Berechtigungspruefung" navButtonPress="onNavPress"
+		showNavButton="true" id="page1">
+		<content>
+			<sap.ui.commons.layout:MatrixLayout
+				id="mLayout1">
+				<sap.ui.commons.layout:rows>
+					<sap.ui.commons.layout:MatrixLayoutRow>
+						<sap.ui.commons.layout:cells>
+							<sap.ui.commons.layout:MatrixLayoutCell>
+								<sap.ui.commons.layout:content>
+									<sap.ui.commons:Label text="SAP-System-Identifikation:" labelFor="DropdownBox1"/>
+								</sap.ui.commons.layout:content>
+							</sap.ui.commons.layout:MatrixLayoutCell>
+							<sap.ui.commons.layout:MatrixLayoutCell>
+								<sap.ui.commons.layout:content>
+									<sap.ui.commons:DropdownBox id="DropdownBox1"
+										editable="true" width="">
+										<!-- <sap.ui.commons:items>
+											<sap.ui.core:ListItem id="CEP" text="CEP" />
+											<sap.ui.core:ListItem id="CC1" text="CC1" />
+										</sap.ui.commons:items> -->
+									</sap.ui.commons:DropdownBox>
+								</sap.ui.commons.layout:content>
+							</sap.ui.commons.layout:MatrixLayoutCell>
+						</sap.ui.commons.layout:cells>
+					</sap.ui.commons.layout:MatrixLayoutRow>
+					<sap.ui.commons.layout:MatrixLayoutRow>
+						<sap.ui.commons.layout:cells>
+							<sap.ui.commons.layout:MatrixLayoutCell>
+								<sap.ui.commons.layout:content>
+									<sap.ui.commons:Label text="Quellmandant:" labelFor="DropdownBox2"/>
+								</sap.ui.commons.layout:content>
+							</sap.ui.commons.layout:MatrixLayoutCell>
+							<sap.ui.commons.layout:MatrixLayoutCell>
+								<sap.ui.commons.layout:content>
+									<sap.ui.commons:DropdownBox id="DropdownBox2"
+										editable="true" width="">
+										<!-- <sap.ui.commons:items>
+											<sap.ui.core:ListItem id="800" text="800" />
+											<sap.ui.core:ListItem id="100" text="100" />
+										</sap.ui.commons:items> -->
+									</sap.ui.commons:DropdownBox>
+								</sap.ui.commons.layout:content>
+							</sap.ui.commons.layout:MatrixLayoutCell>
+						</sap.ui.commons.layout:cells>
+					</sap.ui.commons.layout:MatrixLayoutRow>
+					<sap.ui.commons.layout:MatrixLayoutRow>
+						<sap.ui.commons.layout:cells>
+							<sap.ui.commons.layout:MatrixLayoutCell>
+								<sap.ui.commons.layout:content>
+									<sap.ui.commons:Label text="Rolle:" labelFor="DropdownBox3"/>
+								</sap.ui.commons.layout:content>
+							</sap.ui.commons.layout:MatrixLayoutCell>
+							<sap.ui.commons.layout:MatrixLayoutCell>
+								<sap.ui.commons.layout:content>
+									<sap.ui.commons:DropdownBox id="DropdownBox3"
+										editable="true" width="">
+										<!-- <sap.ui.commons:items>
+											<sap.ui.core:ListItem id="22" text="SAP_BC_ILM_SB" />
+											<sap.ui.core:ListItem id="33"
+												text="CEYONIQ_ARCHIVELINK_TEST" />
+										</sap.ui.commons:items> -->
+									</sap.ui.commons:DropdownBox>
+								</sap.ui.commons.layout:content>
+							</sap.ui.commons.layout:MatrixLayoutCell>
+						</sap.ui.commons.layout:cells>
+					</sap.ui.commons.layout:MatrixLayoutRow>
+					<sap.ui.commons.layout:MatrixLayoutRow>
+						<sap.ui.commons.layout:cells>
+							<sap.ui.commons.layout:MatrixLayoutCell>
+								<sap.ui.commons.layout:content>
+									<sap.ui.commons:Label text="Modul:" />
+								</sap.ui.commons.layout:content>
+							</sap.ui.commons.layout:MatrixLayoutCell>
+							<sap.ui.commons.layout:MatrixLayoutCell>
+								<sap.ui.commons.layout:content>
+									<sap.ui.commons:DropdownBox id="DropdownBox4"
+										editable="true" width="">
+										<!-- <sap.ui.commons:items>
+											<sap.ui.core:ListItem id="111" text="" />
+										</sap.ui.commons:items> -->
+									</sap.ui.commons:DropdownBox>
+								</sap.ui.commons.layout:content>
+							</sap.ui.commons.layout:MatrixLayoutCell>
+						</sap.ui.commons.layout:cells>
+					</sap.ui.commons.layout:MatrixLayoutRow>
+					<sap.ui.commons.layout:MatrixLayoutRow>
+						<sap.ui.commons.layout:cells>
+							<sap.ui.commons.layout:MatrixLayoutCell>
+								<sap.ui.commons.layout:content>
+									<sap.ui.commons:Label text="Rollenebene"
+										design="Bold" />
+								</sap.ui.commons.layout:content>
+							</sap.ui.commons.layout:MatrixLayoutCell>
+						</sap.ui.commons.layout:cells>
+					</sap.ui.commons.layout:MatrixLayoutRow>
+					<sap.ui.commons.layout:MatrixLayoutRow>
+						<sap.ui.commons.layout:cells>
+							<sap.ui.commons.layout:MatrixLayoutCell>
+								<sap.ui.commons.layout:content>
+									<sap.ui.commons:Button text="Pruefungen Rollen"
+										press="onRoll_Pruefung" />
+								</sap.ui.commons.layout:content>
+							</sap.ui.commons.layout:MatrixLayoutCell>
+						</sap.ui.commons.layout:cells>
+					</sap.ui.commons.layout:MatrixLayoutRow>
+					<sap.ui.commons.layout:MatrixLayoutRow>
+						<sap.ui.commons.layout:cells>
+							<sap.ui.commons.layout:MatrixLayoutCell>
+								<sap.ui.commons.layout:content>
+									<sap.ui.commons:Label text="Anwenderebene"
+										design="Bold" />
+								</sap.ui.commons.layout:content>
+							</sap.ui.commons.layout:MatrixLayoutCell>
+						</sap.ui.commons.layout:cells>
+					</sap.ui.commons.layout:MatrixLayoutRow>
+					<sap.ui.commons.layout:MatrixLayoutRow>
+						<sap.ui.commons.layout:cells>
+							<sap.ui.commons.layout:MatrixLayoutCell>
+								<sap.ui.commons.layout:content>
+									<sap.ui.commons:Button text="Pruefungen Anwender"
+										press="onAnwend_Pruefung" />
+								</sap.ui.commons.layout:content>
+							</sap.ui.commons.layout:MatrixLayoutCell>
+						</sap.ui.commons.layout:cells>
+					</sap.ui.commons.layout:MatrixLayoutRow>
+					<sap.ui.commons.layout:MatrixLayoutRow>
+						<sap.ui.commons.layout:cells>
+							<sap.ui.commons.layout:MatrixLayoutCell>
+								<sap.ui.commons.layout:content>
+									<sap.ui.commons:Label text="Nutzungsebene"
+										design="Bold" />
+								</sap.ui.commons.layout:content>
+							</sap.ui.commons.layout:MatrixLayoutCell>
+						</sap.ui.commons.layout:cells>
+					</sap.ui.commons.layout:MatrixLayoutRow>
+					<sap.ui.commons.layout:MatrixLayoutRow>
+						<sap.ui.commons.layout:cells>
+							<sap.ui.commons.layout:MatrixLayoutCell>
+								<sap.ui.commons.layout:content>
+									<sap.ui.commons:Button text="Pruefungen Nutzung"
+										press="onNutz_Pruefung" />
+								</sap.ui.commons.layout:content>
+							</sap.ui.commons.layout:MatrixLayoutCell>
+						</sap.ui.commons.layout:cells>
+					</sap.ui.commons.layout:MatrixLayoutRow>
+				</sap.ui.commons.layout:rows>
+			</sap.ui.commons.layout:MatrixLayout>
+
+		</content>
+	</Page>
+</core:View>

@@ -1,0 +1,15 @@
+.myButton{
+		border: 1px solid red;
+		background-color: yellow;
+		font-style: italic;
+	}
+	.myButton:hover,
+	.myButton:focus{
+		border-color: yellow;
+		background-color: red;
+	}
+	.myButton:active{
+		border: 2px solid black;
+		background-color: blue;
+		color: white;
+	}

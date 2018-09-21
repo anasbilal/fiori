@@ -1,0 +1,108 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:sap.ui.commons="sap.ui.commons"
+	xmlns:sap.ui.commons.layout="sap.ui.commons.layout" controllerName="sap.Bekon.controller.cockpit"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Berechtigungscockpit">
+		<content>
+			<sap.ui.commons:TabStrip id="tabStripDetail"
+				width="600px" height="450px">
+				<sap.ui.commons:tabs>
+					<sap.ui.commons:Tab id="tab1" text="Auswertung">
+						<sap.ui.commons:content>
+							<sap.ui.commons.layout:MatrixLayout
+								id="mLayout1">
+								<sap.ui.commons.layout:rows>
+									<sap.ui.commons.layout:MatrixLayoutRow>
+										<sap.ui.commons.layout:cells>
+											<sap.ui.commons.layout:MatrixLayoutCell>
+												<sap.ui.commons.layout:content>
+													<sap.ui.commons:Button text="Berechtigungspruefung"
+														press="onBerpruefung" />
+													<sap.ui.commons:Button text="Übergangene Minderung pruefen"
+														press="onUebMinpruefung" />
+												</sap.ui.commons.layout:content>
+											</sap.ui.commons.layout:MatrixLayoutCell>
+										</sap.ui.commons.layout:cells>
+									</sap.ui.commons.layout:MatrixLayoutRow>
+								</sap.ui.commons.layout:rows>
+							</sap.ui.commons.layout:MatrixLayout>
+						</sap.ui.commons:content>
+					</sap.ui.commons:Tab>
+
+					<sap.ui.commons:Tab id="tab2"
+						text="Pflege Customizingtabellen">
+						<sap.ui.commons:content>
+							<sap.ui.commons.layout:MatrixLayout
+								id="mLayout2">
+								<sap.ui.commons.layout:rows>
+									<sap.ui.commons.layout:MatrixLayoutRow>
+										<sap.ui.commons.layout:cells>
+											<sap.ui.commons.layout:MatrixLayoutCell>
+												<sap.ui.commons.layout:content>
+													<sap.ui.commons:Button text="Minderungsgruende"
+														press="onMin_Gruende" />
+													<sap.ui.commons:Button text="Minderungsverantwortliche"
+														press="onMin_Ver" />
+													<sap.ui.commons:Button text="Risikominderung Rollenebene"
+														press="onRisk_Min_Rolle" />
+													<sap.ui.commons:Button
+														text="Risikominderung Tcode-Kombinationen Nutzerebene"
+														press="onRisk_Min_Tcode" />
+													<sap.ui.commons:Button text="Risikominderung TCodes Nutzerebene"
+														press="onRisk_Min_Nutz" />
+													<sap.ui.commons:Button text="Risiken"
+														press="onRisk" />
+													<sap.ui.commons:Button text="Kritische Objekte"
+														press="onKri_Obj" />
+													<sap.ui.commons:Button text="Kritische Transaktionen"
+														press="onKri_Trans" />
+													<sap.ui.commons:Button text="Funktionsueberschneidungen"
+														press="onFunkt_Ueber" />
+													<sap.ui.commons:Button
+														text="Funktionsueberschneidungen mit Objekten" press="onFunkt_Ueber_Obj" />
+													<sap.ui.commons:Button text="Kritische Profile"
+														press="onKri_Prof" />
+													<sap.ui.commons:Button text="Kritische Rollen"
+														press="onKri_Roll" />
+													<sap.ui.commons:Button text="Zulässige RFC-Ziele"
+														press="onZul_Rfc" />
+												</sap.ui.commons.layout:content>
+											</sap.ui.commons.layout:MatrixLayoutCell>
+										</sap.ui.commons.layout:cells>
+									</sap.ui.commons.layout:MatrixLayoutRow>
+								</sap.ui.commons.layout:rows>
+							</sap.ui.commons.layout:MatrixLayout>
+						</sap.ui.commons:content>
+					</sap.ui.commons:Tab>
+
+					<!-- <sap.ui.commons:Tab id="tab3" text="Upload der Prüftabellen"></sap.ui.commons:Tab> -->
+
+					<sap.ui.commons:Tab id="tab4" text="Statistikdaten">
+						<sap.ui.commons:content>
+							<sap.ui.commons.layout:MatrixLayout
+								id="mLayout4">
+								<sap.ui.commons.layout:rows>
+									<sap.ui.commons.layout:MatrixLayoutRow>
+										<sap.ui.commons.layout:cells>
+											<sap.ui.commons.layout:MatrixLayoutCell>
+												<sap.ui.commons.layout:content>
+													<sap.ui.commons:Button text="Nutzungsstatistik laden"
+														press="onLaden" />
+													<sap.ui.commons:Button text="Nutzungsstatistik löschen"
+														press="onLoeschen" />
+												</sap.ui.commons.layout:content>
+											</sap.ui.commons.layout:MatrixLayoutCell>
+										</sap.ui.commons.layout:cells>
+									</sap.ui.commons.layout:MatrixLayoutRow>
+								</sap.ui.commons.layout:rows>
+							</sap.ui.commons.layout:MatrixLayout>
+						</sap.ui.commons:content>
+
+					</sap.ui.commons:Tab>
+
+				</sap.ui.commons:tabs>
+			</sap.ui.commons:TabStrip>
+
+		</content>
+	</Page>
+</core:View>

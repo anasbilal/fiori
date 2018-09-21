@@ -1,0 +1,59 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:sap.ui.commons="sap.ui.commons" xmlns="sap.m" xmlns:l="sap.Bekon.control"
+	xmlns:sap.ui.commons.layout="sap.ui.commons.layout" xmlns:sap.ui.core="sap.ui.core"
+	controllerName="sap.Bekon.controller.Minderungspruefung" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Minderungspruefung" navButtonPress="onNavPress"
+		showNavButton="true">
+		<content>
+			<l:legend titel="Selektion Verwaltungsdaten:" style="width: 500px;">
+				<l:items>
+					<sap.ui.commons:Label text="SAP-System-Identifikation:"
+						labelFor="DropdownBox1" width="50%" />
+					<sap.ui.commons:DropdownBox id="DropdownBox1"
+						editable="true" width="">
+					</sap.ui.commons:DropdownBox>
+					<sap.ui.commons:Label text="Quellmandant:"
+						labelFor="DropdownBox2" width="50%" />
+					<sap.ui.commons:DropdownBox id="DropdownBox2"
+						editable="true" width="">
+					</sap.ui.commons:DropdownBox>
+					<sap.ui.commons:Label text="Benutzername:"
+						labelFor="txtInput1" width="50%" />
+					<sap.ui.commons:TextField id="txtInput1"
+						editable="true" />
+					<sap.ui.commons:Label text="Aktuelles Datum:"
+						labelFor="DatePicker" width="50%" />
+					<sap.ui.commons:DatePicker id="DatePicker" />
+				</l:items>
+			</l:legend>
+
+			<l:legend titel="Selektion Berechtigungsdaten:" style="width: 500px;">
+				<l:items>
+					<sap.ui.commons:Label text="Rolle:" labelFor="DropdownBox3"
+						width="50%" />
+					<sap.ui.commons:DropdownBox id="DropdownBox3">
+					</sap.ui.commons:DropdownBox>
+					<sap.ui.commons:Label text="Transaktionscode1:"
+						labelFor="DropdownBox4" width="50%" />
+					<sap.ui.commons:DropdownBox id="DropdownBox4">
+					</sap.ui.commons:DropdownBox>
+					<sap.ui.commons:Label text="Transaktionscode2:"
+						labelFor="DropdownBox5" width="50%" />
+					<sap.ui.commons:DropdownBox id="DropdownBox5">
+					</sap.ui.commons:DropdownBox>
+					<sap.ui.commons:Label text="dringende Korrekturen:"
+						labelFor="Input11" width="50%" />
+					<sap.ui.commons:TextField id="Input11" />
+				</l:items>
+			</l:legend>
+
+			<l:legend titel="Verarbeitungsoptionen:" style="width: 500px;">
+				<l:items>
+					<sap.ui.commons:CheckBox text="Echtlauf mit Verbuchung" />
+					<sap.ui.commons:CheckBox text="Mit Protokoll" />
+				</l:items>
+			</l:legend>
+			
+		</content>
+	</Page>
+</core:View>

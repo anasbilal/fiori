@@ -1,0 +1,45 @@
+{
+	"editable":"true",
+	"tooltip":"SAP-System-Identifikation",
+	"rollen":[
+		{	"rolle":"SAP_BC_ILM_SB", 
+			"enabled":"true"
+		},
+		{	"rolle":"CEYONIQ_ARCHIVELINK_TEST", 
+			"enabled":"true"
+		}
+	],
+	"mandante":[
+		{	"mandt":"100",
+			"enabled":"true"
+		},
+		{	"mandt":"800",
+			"enabled":"true"
+		}
+	],
+	"systeme":[
+	{	"device":"CEP",
+		"enabled":"true"
+	},
+	{	"device":"CC1",
+		"enabled":"true"
+	},
+	{	"device":"CC2",
+		"enabled":"true"
+	},
+	{	"device":"CC3",
+		"enabled":"true"
+	}
+	],
+	"module":[
+	{
+		"mod":"Modul1"
+	},
+	{
+		"mod":"Modul2"
+	},
+	{
+		"mod":"Modul3"
+	}		
+	]
+}

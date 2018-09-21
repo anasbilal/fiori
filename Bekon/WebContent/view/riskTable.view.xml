@@ -1,0 +1,52 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m" controllerName="sap.Bekon.controller.riskTable"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Risktabelle" navButtonPress="onNavPress"
+		showNavButton="true">
+		<content>
+			<Table id="riskTable" inset="false" visibleRowCount="5"
+				items="{
+							path: 'risk>/d/results',
+							sorter: {
+								path: 'Riskid'
+							}
+						}"
+				class="sapFDynamicPageAlignContent" width="auto">
+				<columns>
+					<Column width="13em">
+						<Text text="Risk ID" />
+					</Column>
+					<Column>
+						<Text text="Risktext" />
+					</Column>
+					<Column>
+						<Text text="Erdat" />
+					</Column>
+					<Column>
+						<Text text="Ername" />
+					</Column>
+					<Column>
+						<Text text="Aedat" />
+					</Column>
+					<Column>
+						<Text text="Aename" />
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem type="" press="onListItemPress">
+						<cells>
+							<ObjectIdentifier text="{risk>Riskid}" />
+							<Text text="{risk>Risktext}" maxLines="0"></Text>
+							<Text text="{path: 'risk>Erdat', formatter: '.formatter.formatDate'}"></Text>
+							<Text text="{risk>Ername}" maxLines="0"></Text>
+							<Text text="{path: 'risk>Aedat', formatter: '.formatter.formatDate'}"
+								maxLines="0"></Text>
+							<Text text="{risk>Aename}" maxLines="0"></Text>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+
+		</content>
+	</Page>
+</core:View>
