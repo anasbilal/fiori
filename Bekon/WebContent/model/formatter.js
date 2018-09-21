@@ -13,7 +13,13 @@ sap.ui.define([], function() {
 		formatUpperCase : function(sName) {
 			return sName && sName.toUpperCase();
 		},
+		formatLowerCase : function(sName) {
+			return sName && sName.toLowerCase();
+		},
 		formatDate : function(sErdat) {
+			if(sErdat == null){
+				return;
+			}
 			var begin = sErdat.indexOf("(");
 			begin = begin+1;
 			var res = sErdat.substring(begin,19);
